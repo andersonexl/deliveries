@@ -10,6 +10,7 @@ const createDeliveryRoute = (req, res) => {
       }));
    })
    .catch(err => {
+      console.error(err);
       res.status(500).send(JSON.stringify({
          error: true,
          status: 500,
@@ -21,6 +22,7 @@ const createDeliveryRoute = (req, res) => {
 const getAllRoutes = (req, res) => {
    DeliveryRoutes.getRoutes()
    .then(route => {
+      console.error(err);
       res.status(200).send(JSON.stringify({
          error: false,
          status: 200,
